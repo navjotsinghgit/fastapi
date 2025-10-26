@@ -1,0 +1,102 @@
+/* Chart and Image Styles */
+.card canvas {
+    max-width: 100%;
+    height: auto !important;
+    z-index: 1;
+    position: relative;
+}
+
+.chart-placeholder {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.chart-data-visual {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.factory-visual {
+    position: relative;
+    display: inline-block;
+}
+
+.factory-image {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-ui-preview {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
+
+.emission-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* Image hover effects */
+.chart-data-visual,
+.factory-image,
+.dashboard-ui-preview {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chart-data-visual:hover,
+.factory-image:hover,
+.dashboard-ui-preview:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .factory-image {
+        max-width: 150px;
+    }
+
+    .chart-data-visual,
+    .dashboard-ui-preview {
+        margin-top: 0.5rem;
+    }
+}
+
+/* Dark theme image adjustments */
+[data-color-scheme="dark"] .chart-data-visual,
+[data-color-scheme="dark"] .factory-image,
+[data-color-scheme="dark"] .dashboard-ui-preview {
+    opacity: 0.9;
+    filter: brightness(0.9) contrast(1.1);
+}
+
+/* Image loading fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chart-data-visual,
+.factory-image,
+.dashboard-ui-preview {
+    animation: fadeIn 0.5s ease-out;
+}

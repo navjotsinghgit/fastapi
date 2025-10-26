@@ -1,0 +1,173 @@
+/* Clean CSS Theme Variables and Styles */
+
+/* Root variables - Default Light Theme */
+:root {
+  /* Base colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-cream-50: #fcfcf9;
+  --color-cream-100: #ffffff;
+  --color-gray-200: #f5f5f5;
+  --color-gray-300: #a7a9a9;
+  --color-gray-400: #777c7c;
+  --color-charcoal-700: #1f2121;
+  --color-charcoal-800: #262828;
+  --color-slate-900: #133439;
+  --color-teal-300: #32b4c6;
+  --color-teal-400: #2da6b2;
+  --color-teal-500: #21808d;
+  --color-teal-600: #1d7480;
+  --color-teal-700: #1a6873;
+  --color-red-400: #ff5459;
+  --color-red-500: #c0152f;
+  --color-orange-400: #e68161;
+  --color-orange-500: #a84b2f;
+
+  /* Light theme variables */
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: #4a5256;
+  --color-primary: var(--color-teal-600);
+  --color-primary-hover: var(--color-teal-700);
+  --color-border: rgba(94, 82, 64, 0.2);
+  --color-success: var(--color-teal-600);
+  --color-error: var(--color-red-500);
+  --color-warning: var(--color-orange-500);
+  --color-focus-ring: rgba(33, 128, 141, 0.4);
+}
+
+/* Dark theme variables */
+[data-color-scheme="dark"],
+.theme-dark {
+  --color-background: var(--color-charcoal-700);
+  --color-surface: var(--color-charcoal-800);
+  --color-text: var(--color-white);
+  --color-text-secondary: rgba(255, 255, 255, 0.85);
+  --color-primary: var(--color-teal-300);
+  --color-primary-hover: var(--color-teal-400);
+  --color-border: rgba(255, 255, 255, 0.15);
+  --color-success: var(--color-teal-300);
+  --color-error: var(--color-red-400);
+  --color-warning: var(--color-orange-400);
+  --color-focus-ring: rgba(50, 184, 198, 0.4);
+}
+
+/* Light theme explicit class */
+[data-color-scheme="light"],
+.theme-light {
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: #626c71;
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-border: rgba(94, 82, 64, 0.2);
+  --color-success: var(--color-teal-500);
+  --color-error: var(--color-red-500);
+  --color-warning: var(--color-orange-500);
+  --color-focus-ring: rgba(33, 128, 141, 0.4);
+}
+
+/* Apply theme styles */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card {
+  background-color: var(--color-surface) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text) !important;
+}
+
+.navbar {
+  background-color: var(--color-surface) !important;
+  border-color: var(--color-border) !important;
+}
+
+.form-control {
+  background-color: var(--color-surface) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text) !important;
+}
+
+.form-control:focus {
+  background-color: var(--color-surface) !important;
+  border-color: var(--color-primary) !important;
+  color: var(--color-text) !important;
+  box-shadow: 0 0 0 0.2rem var(--color-focus-ring) !important;
+}
+
+.btn-primary {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: var(--color-white) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover) !important;
+  border-color: var(--color-primary-hover) !important;
+}
+
+.text-light {
+  color: var(--color-text) !important;
+}
+
+.text-muted {
+  color: var(--color-text-secondary) !important;
+}
+
+.border-secondary {
+  border-color: var(--color-border) !important;
+}
+
+.bg-dark {
+  background-color: var(--color-surface) !important;
+}
+
+.theme-toggle {
+  color: var(--color-text) !important;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--color-primary) !important;
+  transform: scale(1.1);
+}
+
+.modal-content {
+  background-color: var(--color-surface) !important;
+  border-color: var(--color-border) !important;
+}
+
+.modal-header {
+  border-color: var(--color-border) !important;
+}
+
+.modal-footer {
+  border-color: var(--color-border) !important;
+}
+
+.nav-link {
+  color: var(--color-text-secondary) !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text);
+}
+
+.text-primary {
+  color: var(--color-primary) !important;
+}
+
+.text-secondary {
+  color: var(--color-text-secondary) !important;
+}

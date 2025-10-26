@@ -1,0 +1,95 @@
+/* Global theme transitions */
+:root {
+    --transition-speed: 0.3s;
+    --bs-body-bg: #121416;
+    --bs-body-color: #e9ecef;
+    --card-bg: #1a1d20;
+    --input-bg: #2b3035;
+    --border-color: rgba(255, 255, 255, 0.15);
+    --text-muted: #adb5bd;
+}
+
+body, .card, .form-control, .form-select, .btn, .nav-link {
+    transition: all var(--transition-speed) ease-in-out;
+}
+
+/* Dark theme specific styles */
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select {
+    color: #fff;
+    background-color: rgba(33, 37, 41, 0.95);
+    border-color: #495057;
+}
+
+[data-bs-theme="dark"] .card {
+    background-color: rgba(33, 37, 41, 0.95) !important;
+    border-color: #495057;
+}
+
+/* Light theme specific styles */
+[data-bs-theme="light"] .form-control,
+[data-bs-theme="light"] .form-select {
+    color: #212529;
+    background-color: #fff;
+    border-color: #ced4da;
+}
+
+/* Light theme */
+[data-bs-theme="light"] {
+    --bs-body-bg: #f8f9fa;
+    --bs-body-color: #212529;
+}
+
+[data-bs-theme="light"] .card {
+    background-color: #ffffff !important;
+    border-color: rgba(0, 0, 0, 0.125) !important;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+[data-bs-theme="light"] .form-control,
+[data-bs-theme="light"] .form-select {
+    background-color: #ffffff !important;
+    border-color: #ced4da !important;
+    color: #212529 !important;
+}
+
+[data-bs-theme="light"] .text-light {
+    color: #212529 !important;
+}
+
+[data-bs-theme="light"] .text-muted {
+    color: #6c757d !important;
+}
+
+[data-bs-theme="light"] .border-secondary {
+    border-color: #dee2e6 !important;
+}
+
+[data-bs-theme="light"] .bg-dark {
+    background-color: #ffffff !important;
+}
+
+[data-bs-theme="light"] .packaging-container {
+    background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+[data-bs-theme="light"] .badge {
+    border: 1px solid rgba(0,0,0,.1);
+}
+
+[data-bs-theme="light"] canvas {
+    background-color: transparent;
+}
+
+/* Theme toggle button styles */
+#themeToggle {
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+#themeToggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}

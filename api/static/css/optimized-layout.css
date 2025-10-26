@@ -1,0 +1,140 @@
+/* Optimized layout styles */
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)),
+        url('../images/sebastian-mark-iVCxrjIfAi8-unsplash.jpg') center center/cover no-repeat fixed;
+    color: var(--color-text);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Compact card styles */
+.card {
+    margin-bottom: 1rem !important;
+    background-color: rgba(38, 40, 40, 0.95) !important;
+    backdrop-filter: blur(10px);
+}
+
+/* Remove excess padding */
+.container-fluid {
+    padding: 0.5rem !important;
+}
+
+.card-body {
+    padding: 1rem !important;
+}
+
+.row {
+    margin: 0 !important;
+}
+
+/* Chart containers */
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+}
+
+/* Optimize grid spacing */
+.col-xl-3, .col-lg-6, .col-lg-4, .col-lg-8 {
+    padding: 0.5rem !important;
+}
+
+/* Key metrics cards */
+.key-metrics .card {
+    height: auto !important;
+    min-height: 120px;
+}
+
+/* Chart cards */
+.chart-card {
+    height: auto !important;
+}
+
+/* Real-time chart container */
+#realtime-chart {
+    min-height: 300px !important;
+    max-height: 350px !important;
+}
+
+/* Industry breakdown section */
+#industry-breakdown-chart {
+    min-height: 250px !important;
+    max-height: 300px !important;
+}
+
+/* Monthly trend chart */
+#monthly-trend-chart {
+    min-height: 200px !important;
+    max-height: 250px !important;
+}
+
+/* Source and progress charts */
+#emissions-source-chart,
+#reduction-progress-chart {
+    min-height: 200px !important;
+    max-height: 250px !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 0.25rem !important;
+    }
+    
+    .card {
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .card-body {
+        padding: 0.75rem !important;
+    }
+    
+    #realtime-chart,
+    #industry-breakdown-chart,
+    #monthly-trend-chart,
+    #emissions-source-chart,
+    #reduction-progress-chart {
+        min-height: 200px !important;
+    }
+}
+
+/* Dark theme enhancements */
+[data-color-scheme="dark"] .card {
+    background-color: rgba(38, 40, 40, 0.95) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Remove margins between cards in same row */
+.row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    flex: 1;
+    margin: 0 !important;
+}
+
+/* Optimize card header */
+.card-header {
+    padding: 0.75rem 1rem !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Remove extra space in metrics */
+.metric-value {
+    line-height: 1.2 !important;
+    margin: 0 !important;
+}
+
+.metric-unit {
+    margin: 0.25rem 0 !important;
+}
+
+/* Tighten up spacing in charts */
+canvas {
+    margin: 0 !important;
+    padding: 0 !important;
+}
