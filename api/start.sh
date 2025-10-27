@@ -1,2 +1,2 @@
 #!/bin/bash
-uvicorn main:app --host=0.0.0.0 --workers=10
+uvicorn main:app --host=0.0.0.0 --workers=2
